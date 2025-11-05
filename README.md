@@ -5,7 +5,9 @@ A complete end-to-end deep learning project built with an **Artificial Neural Ne
 ---
 
 ## 🚀 Project Overview  
+
 This project aims to help businesses retain customers by predicting churn using historical data.  
+
 It uses the `Churn_Modelling.csv` dataset and includes all essential steps:  
 
 - Data preprocessing (encoding, scaling, splitting)
@@ -19,27 +21,43 @@ This project can serve as a great portfolio example demonstrating your skills in
 ---
 
 ## 📁 Repository Structure  
-Customer-Churn-Prediction-ANN-model-/
-│
-├── Churn_Modelling.csv # Dataset
-├── experiments.ipynb # Data preprocessing + model building notebook
-├── prediction.ipynb # Example predictions using saved model
-├── app.py # Script to run predictions
-├── model.h5 # Trained ANN model
-├── label_encoder_gender.pkl # Label encoder for Gender feature
-├── onehot_encoder_geography.pkl # One-hot encoder for Geography
-├── scaler.pkl # Feature scaler (StandardScaler or MinMaxScaler)
-├── requirements.txt # List of dependencies
-└── README.md # Project documentation
+Customer-Churn-Prediction-ANN-model
+
+--> Churn_Modelling.csv # Dataset
+
+--> experiments.ipynb # Data preprocessing + model building notebook
+
+--> prediction.ipynb # Example predictions using saved model
+
+--> app.py # Script to run predictions
+
+--> model.h5 # Trained ANN model
+
+--> label_encoder_gender.pkl # Label encoder for Gender feature
+
+--> onehot_encoder_geography.pkl # One-hot encoder for Geography
+
+--> scaler.pkl # Feature scaler (StandardScaler or MinMaxScaler)
+
+--> requirements.txt # List of dependencies
+
+--> README.md # Project documentation
 
 ---
 
 ## ✅ Features  
+
+
 - End-to-end ANN model to predict customer churn  
+
 - Preprocessing using LabelEncoder, OneHotEncoder, and Scaler  
+
 - Model serialization (`.h5` and `.pkl` files for reuse)  
+
 - Confusion matrix and accuracy evaluation  
+
 - Real-time prediction with sample customer input  
+
 - Easy retraining using Jupyter notebook  
 
 ---
@@ -60,7 +78,9 @@ venv\Scripts\activate   # For Windows
 pip install -r requirements.txt
 ```
 4. **Ensure the dataset Churn_Modelling.csv is present in the root directory.**
+
 5. **To retrain the model, open experiments.ipynb and run all cells.**
+
 6. **To make predictions, you can use:**
    ```bash
    python app.py
@@ -68,6 +88,7 @@ pip install -r requirements.txt
    or open prediction.ipynb to test manually.
 
 📊 Model Architecture
+
 
 Input Layer: Number of neurons = number of features after encoding
 
@@ -79,20 +100,12 @@ Optimizer: Adam
 
 Loss Function: Binary Crossentropy
 
-Metrics: Accuracy
-
-| Metric             | Value (Example)        |
-| ------------------ | ---------------------- |
-| Accuracy           | 85% – 88%              |
-| Loss               | ~0.32                  |
-| Precision / Recall | Balanced               |
-| Confusion Matrix   | Visualized in notebook |
-
 **Insights:**
 
 Customers with low tenure, low credit score, or fewer products are more likely to churn.
 
 Long-tenure, multi-product customers with higher balance tend to stay.
+
 **🎯 How to Use the Model**
 
 1. **Load the saved model:**
@@ -126,3 +139,4 @@ print(churn_status)
 
 This project is licensed under the MIT License — see the LICENSE
  file for details.
+
